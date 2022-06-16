@@ -1,0 +1,17 @@
+{% extends 'reservations/base.html' %}
+{% block content %}
+    <div class="content-section">
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Bus</legend>
+                <h3>ARE YOU SURE YOU WANT TO REMOVE BUS "{{ object.registration_number }}"?</h3>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                <a class="btn btn-outline-secondary" href="{% url 'available_buses_detail' object.id%}">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+{% endblock content %}

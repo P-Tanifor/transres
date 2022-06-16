@@ -1,0 +1,7 @@
+{% extends 'reservations/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+   <h2>TRANSFER SUCCESSFUL</h2><br>
+    <a class="btn btn-outline-info" href="{% url 'available_buses' %}">Exit</a>
+{% endblock content %}

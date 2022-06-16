@@ -1,0 +1,13 @@
+{% extends 'reservations/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Cash Transfers To Transport Companies</legend>
+                    {{ transfers_form | crispy }}
+                <button class="btn btn-outline-info" type="submit">Transfer</button>
+            </fieldset>
+    </form>
+{% endblock content %}

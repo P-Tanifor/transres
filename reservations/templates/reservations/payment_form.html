@@ -1,0 +1,13 @@
+{% extends 'reservations/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Payment Info</legend>
+                    {{ payment_form | crispy }}
+                <button class="btn btn-outline-info" type="submit">Pay Now</button>
+            </fieldset>
+    </form>
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends 'reservations/base.html' %}
+{% block content %}
+    <legend class="border-bottom mb-4">Your Receipt</legend>
+    <p>{{ payer_info.f_name}} {{ payer_info.l_name }}</p>
+    <p>Payment for bus No: {{ payer_info.bus }}</p>
+    <p>From {{ payer_info.take_off }} To {{ payer_info.destination }} On {{ payer_info.d_date }}</p>
+    <p><h4 class="btn btn-outline-info" >Thank You For Using TransRes.</h4></p>
+    <p><h4>We Wish You A Pleasant Trip!</h4></p>
+{% endblock content %}

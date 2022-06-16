@@ -1,0 +1,24 @@
+{% extends 'reservations/base.html' %}
+{% block content %}
+    <h4>A Reliable Transport Network</h4>
+    {% for bus in available_buses %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-title ml-4 mb-2">
+              <a class="mr-2" href="{% url 'individual_company_buses' bus.author.username %}">{{ bus.author }}</a>
+            </div>
+              <div style="width: 100%; display: table;">
+                <div style="display: table-row; height: 100px;">
+                    <div style="width: 25%; display: table-cell; ">
+                        <img src="{{bus.author.profile.image.url }}">
+                    </div>
+                    <div style="display: table-cell;">
+                         {{ bus.company_Info }}
+                    </div>
+                </div>
+              </div>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+
